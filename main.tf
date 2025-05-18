@@ -29,7 +29,7 @@ output "ec2_bestine" {
 
 //print EC2 Name
 output "ec2_web" {
-  value = module.vpc.ec2_bestine_name
+  value = module.vpc.ec2_web_name
 }
 
 output "s3_name" {
