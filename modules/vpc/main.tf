@@ -85,7 +85,6 @@ resource "aws_security_group" "sg_sankari_ssh" {
     Name = "sg_sankari_ssh"
   }
 }
-
 resource "aws_instance" "bestine_server" {
   ami                    = "ami-0afc7fe9be84307e4"
   instance_type          = "t2.micro"
@@ -109,4 +108,10 @@ resource "aws_instance" "web_server" {
   tags = {
     Name = "sankari web_server EC2"
   }
+}
+
+//s3 bucket creation
+resource "aws_s3_bucket" "sankari_bucket" {
+  bucket = "sankari-s3"        # Must be globally unique
+  force_destroy = true
 }

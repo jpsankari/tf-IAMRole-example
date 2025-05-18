@@ -29,3 +29,7 @@ output "ec2_web_name" {
     description = "The name of the web server"
   value = aws_instance.web_server.tags["Name"]
 }
+
+output "bucket_name" {
+  value = aws_s3_bucket.sankari_bucket.bucket
+}
